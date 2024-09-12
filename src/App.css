@@ -1,0 +1,13 @@
+.video-react {
+  padding-top: 0 !important;
+}
+
+.video-react-control-bar {
+  /* display: none */
+}
+
+
+iframe {
+  width: 1000px !important;
+  height: 710px !important;
+}
