@@ -1,50 +1,31 @@
-# React + TypeScript + Vite
+# Тестовое задание: Видео плеер
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# запуск
 
-Currently, two official plugins are available:
+- npm install
+- npm run dev
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Реализация
 
-## Expanding the ESLint configuration
+Тестовое задание сделано с помощью React/Typesript, Redux-toolkit/RTK-query для стилизации использана библиотека tailwind
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Задаyние
 
-- Configure the top-level `parserOptions` property like this:
+Есть список событий аналитики с таймстемпами (временем в миллисекундах от начала видео) и данными о зоне в кадре, в которой событие возникло (координаты в пикселях):
+https://5025y.wiremockapi.cloud/json/1
+Адрес тестового видеопотока:
+http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4
+Необходимо реализовать веб-приложение, обладающее следующим функционалом:
+● Отображение тестового видео с возможностью постановки на паузу и возобновлением воспроизведения по клику на область видео
+● Отображения списка событий аналитики с возможностью позиционирования видео на момент, указанный в событии
+● Список событий должен быть отсортирован по дате возникновения, само событие должно отображаться в списке в виде времени своего возникновения в формате (минуты:секунды:миллисекунды). Пример: 00:03:012, 01:05:123,
+● В момент возникновения события в плеере поверх видео должен рисоваться зелёный прямоугольник, соответствующий области, определённой в событии. Прямоугольник должен отображаться как при переходе к событию по клику из списка событий, так и в случае обычного воспроизведения и навигации по видео. При наступлении даты окончания события, прямоугольник должен скрываться. Возможна ситуация что одновременно показываются 2 и более прямоугольника.
+Требования:
+1. Приложение должно быть написано с использованием TypeScript.
+2. Реализация должна использовать React
+3. Решение должно быть опубликовано на GitHub
+Желательно:
+1. Использование redux
+2. Использование redux-saga
+3. Покрытие тестами
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
-
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
-
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```

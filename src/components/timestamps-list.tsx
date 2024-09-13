@@ -12,8 +12,6 @@ const TimestampsList: FC<TimestampsListProps> = ({ handleClick }) => {
     const { data, isFetching } = useGetTimeStampsQuery('');
     const [sortedTimestamps, setSortedTimestamps] = useState<Timestamp[]>([]);
 
-    
-
     useEffect(() => {
         if (data && Array.isArray(data)) {
             const sortedData = [...data].sort((a, b) => a.timestamp - b.timestamp);
