@@ -15,7 +15,7 @@ interface VideoFetcherProps {
 }
 
 const VideoFetcher: React.FC<VideoFetcherProps> = ({ videoUrl, videoRef, isPlaying, setIsPlaying }) => {
-    const { data, isFetching } = useGetTimeStampsQuery('');
+    const { data } = useGetTimeStampsQuery('');
 
     const dispatch = useDispatch()
 

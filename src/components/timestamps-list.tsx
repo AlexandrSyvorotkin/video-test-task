@@ -9,7 +9,7 @@ interface TimestampsListProps {
 }
 
 const TimestampsList: FC<TimestampsListProps> = ({ handleClick }) => {
-    const { data, isFetching } = useGetTimeStampsQuery('');
+    const { data } = useGetTimeStampsQuery('');
     const [sortedTimestamps, setSortedTimestamps] = useState<Timestamp[]>([]);
 
     useEffect(() => {
