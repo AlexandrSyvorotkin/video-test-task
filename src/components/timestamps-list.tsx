@@ -1,8 +1,8 @@
-import { FC, useEffect, useId, useLayoutEffect, useMemo, useRef, useState } from "react";
-import { timeStamps, useGetTimeStampsQuery } from "../services/timestamps_analytics";
+import { FC, useEffect, useState } from "react";
+import { useGetTimeStampsQuery } from "../services/timestamps_analytics";
 import { Timestamp } from "../types/timestamp-type";
 import { timestampToTimeFormat } from "../utils/timeStampToTimeFormat";
-import { nanoid } from "nanoid";
+
 
 interface TimestampsListProps {
     handleClick: any
