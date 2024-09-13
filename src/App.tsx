@@ -1,6 +1,5 @@
 import { useState, useRef } from 'react';
 import './App.css'
-import { useGetTimeStampsQuery } from './services/timestamps_analytics'
 import TimestampsList from './components/timestamps-list'
 import VideoFetcher from './components/video-player'
 
