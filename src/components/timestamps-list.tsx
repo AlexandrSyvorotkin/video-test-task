@@ -20,7 +20,7 @@ const TimestampsList: FC<TimestampsListProps> = ({ handleClick }) => {
     }, [data]);
 
     if (isFetching) {
-        return <div>Loading...</div>;
+        return <div>Загрузка</div>;
     }
 
 
