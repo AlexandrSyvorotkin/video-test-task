@@ -1,8 +1,5 @@
-export const sec2Min = (sec: number): { min: number, sec: number } => {
-    const min = Math.floor(sec / 60);
-    const secRemain = Math.floor(sec % 60);
-    return {
-        min: min,
-        sec: secRemain,
-    };
+export const formatTime = (time: number): string => {
+    const minutes = Math.floor(time / 60);
+    const seconds = Math.floor(time % 60);
+    return `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
 };

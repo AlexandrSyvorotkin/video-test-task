@@ -1,7 +1,7 @@
 import { useState, useRef } from 'react';
 import './App.css'
-import { useGetTimeStampsQuery } from './api/timestamps_analytics'
-import TimestampsList from './components/timestampList/timestamps-list'
+import { useGetTimeStampsQuery } from './services/timestamps_analytics'
+import TimestampsList from './components/timestamps-list'
 import VideoFetcher from './components/video-player'
 
 function App() {
