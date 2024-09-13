@@ -5,6 +5,9 @@
 - npm install
 - npm run dev
 
+# ссылка на деплой 
+https://video-test-task-ighe.vercel.app/
+
 ## Реализация
 
 Тестовое задание сделано с помощью React/Typesript, Redux-toolkit/RTK-query для стилизации использана библиотека tailwind

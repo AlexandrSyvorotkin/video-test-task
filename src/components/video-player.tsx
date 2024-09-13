@@ -95,13 +95,7 @@ const VideoFetcher: React.FC<VideoFetcherProps> = ({ videoUrl, videoRef, isPlayi
         display: isElementVisible ? 'block' : 'none'
     };
 
-    if (isFetching) {
-        return (
-            <div className="flex items-center justify-center min-h-screen">
-                <h1 className="text-2xl font-bold text-gray-700">Загрузка...</h1>
-            </div>
-        );
-    }
+    
     
 
     return (
